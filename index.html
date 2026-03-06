@@ -321,12 +321,14 @@
             <div class="hidden md:flex items-center gap-8">
                 <a href="#concepto"
                     class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Concepto</a>
-                <a href="#demografia"
-                    class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Demografía</a>
                 <a href="#sectores"
                     class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Sectores</a>
-                <a href="#juventud"
-                    class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Juventud</a>
+                <a href="#informalidad"
+                    class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Informalidad</a>
+                <a href="#rankings"
+                    class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Rankings</a>
+                <a href="#politicas"
+                    class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Políticas</a>
                 <a href="Argentina_ IA, Empleo y Transición Tecnológica.pdf" download
                     class="download-btn px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
@@ -349,10 +351,11 @@
         <div class="mobile-menu md:hidden px-6 pb-0" id="mobileMenu">
             <div class="flex flex-col gap-3 py-4 border-t border-slate-100">
                 <a href="#concepto" class="text-sm font-medium text-slate-600 hover:text-slate-900 py-2">Concepto</a>
-                <a href="#demografia"
-                    class="text-sm font-medium text-slate-600 hover:text-slate-900 py-2">Demografía</a>
                 <a href="#sectores" class="text-sm font-medium text-slate-600 hover:text-slate-900 py-2">Sectores</a>
-                <a href="#juventud" class="text-sm font-medium text-slate-600 hover:text-slate-900 py-2">Juventud</a>
+                <a href="#informalidad"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 py-2">Informalidad</a>
+                <a href="#rankings" class="text-sm font-medium text-slate-600 hover:text-slate-900 py-2">Rankings</a>
+                <a href="#politicas" class="text-sm font-medium text-slate-600 hover:text-slate-900 py-2">Políticas</a>
                 <a href="Argentina_ IA, Empleo y Transición Tecnológica.pdf" download
                     class="download-btn px-4 py-3 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 mt-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
@@ -574,6 +577,277 @@
             </div>
         </section>
 
+        <!-- Sección 5: Sustitución vs Complementariedad -->
+        <section id="sustitucion" class="space-y-10 scroll-mt-20">
+            <div class="animate-on-scroll">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4 border-l-8 border-arg-sky pl-4">Sustitución vs.
+                    Complementariedad</h2>
+                <p class="text-slate-600 text-lg max-w-3xl">El Ministerio de Trabajo estima que el <strong>54% del
+                        empleo formal privado</strong> (3M+ puestos) está expuesto a la IA. Pero el impacto no es
+                    uniforme: se divide en tres escenarios.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-red-50 border-2 border-red-200 p-8 rounded-2xl info-card animate-on-scroll">
+                    <span class="block text-4xl font-black text-red-500 mb-2">676K</span>
+                    <h3 class="font-bold text-slate-800 mb-2">Sustitución Directa</h3>
+                    <p class="text-sm text-slate-500">22% del empleo expuesto. Oficina, secretariado, administración de
+                        datos. La IA ejecuta íntegramente las funciones centrales.</p>
+                </div>
+                <div class="bg-amber-50 border-2 border-amber-200 p-8 rounded-2xl info-card animate-on-scroll delay-1">
+                    <span class="block text-4xl font-black text-amber-500 mb-2">129K</span>
+                    <h3 class="font-bold text-slate-800 mb-2">Sustitución Parcial</h3>
+                    <p class="text-sm text-slate-500">4% del empleo expuesto. Comercio, ventas corporativas y roles
+                        técnicos medios. Se reduce el personal necesario.</p>
+                </div>
+                <div
+                    class="bg-emerald-50 border-2 border-emerald-200 p-8 rounded-2xl info-card animate-on-scroll delay-2">
+                    <span class="block text-4xl font-black text-emerald-500 mb-2">2.1M</span>
+                    <h3 class="font-bold text-slate-800 mb-2">Complementariedad</h3>
+                    <p class="text-sm text-slate-500">71% del empleo expuesto. La IA actúa como "copiloto" que potencia
+                        la productividad. Directivos, científicos y técnicos.</p>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 animate-on-scroll">
+                <h4 class="font-bold text-slate-400 text-xs uppercase mb-4 tracking-wider">Distribución del Impacto
+                    sobre 3M+ de puestos expuestos</h4>
+                <div class="chart-container" style="max-height:300px; min-height:250px;">
+                    <canvas id="sustitucionChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 6: Informalidad -->
+        <section id="informalidad" class="bg-slate-900 text-white p-10 rounded-3xl scroll-mt-20 animate-on-scroll">
+            <div class="max-w-3xl mb-10">
+                <h2 class="text-3xl font-bold mb-4">Informalidad: El Falso Amortiguador</h2>
+                <p class="text-slate-300 text-lg">El <strong class="text-white">42% del total de ocupados</strong> en
+                    Argentina trabaja en la informalidad. Lejos de ser un escudo contra la IA, funciona como un
+                    catalizador de precariedad.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 mb-10">
+                <div>
+                    <div class="chart-container" style="max-height:300px; min-height:260px;">
+                        <canvas id="informalidadChart"></canvas>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white/10 backdrop-blur p-5 rounded-xl">
+                        <span class="block text-2xl font-black text-red-400">36.1%</span>
+                        <span class="text-sm text-slate-300">Asalariados sin descuentos jubilatorios</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur p-5 rounded-xl">
+                        <span class="block text-2xl font-black text-amber-400">62.4%</span>
+                        <span class="text-sm text-slate-300">Cuentapropistas no registrados</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur p-5 rounded-xl">
+                        <span class="block text-2xl font-black text-orange-400">~80%</span>
+                        <span class="text-sm text-slate-300">Informalidad en construcción y trabajo doméstico</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white/5 border border-white/10 p-6 rounded-xl">
+                    <span class="text-red-400 font-bold text-sm uppercase">01. Sin Red</span>
+                    <p class="text-sm text-slate-300 mt-2">A diferencia del formal, el informal enfrenta la
+                        obsolescencia técnica en absoluta soledad institucional. Sin indemnización, sin seguro de
+                        desempleo.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded-xl">
+                    <span class="text-amber-400 font-bold text-sm uppercase">02. Deflación Salarial</span>
+                    <p class="text-sm text-slate-300 mt-2">Los freelancers argentinos compiten contra la velocidad de la
+                        IA y contra pares globales. Carrera hacia el fondo en honorarios.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded-xl">
+                    <span class="text-orange-400 font-bold text-sm uppercase">03. Reconversión Privatizada</span>
+                    <p class="text-sm text-slate-300 mt-2">La carga de capacitarse recae exclusivamente sobre el
+                        trabajador informal, ensanchando la desigualdad estructural.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 7: Juventud Expandida -->
+        <section id="juventud-data" class="space-y-10 scroll-mt-20">
+            <div class="animate-on-scroll">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4 border-l-8 border-arg-sky pl-4">La "Escalera Rota" del
+                    Empleo Juvenil</h2>
+                <p class="text-slate-600 text-lg max-w-3xl">La IA automatiza exactamente las tareas de los roles
+                    <em>entry-level</em> (asistentes, programadores trainee, analistas junior). Si se destruyen estos
+                    roles, ¿cómo se formará la próxima generación de profesionales senior?
+                </p>
+            </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 text-center stat-card animate-on-scroll">
+                    <span class="block text-3xl font-black text-arg-sky">-14%</span>
+                    <span class="text-xs text-slate-400 font-bold uppercase">Contrataciones 22-25 años
+                        (Anthropic)</span>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-xl border border-slate-200 text-center stat-card animate-on-scroll delay-1">
+                    <span class="block text-3xl font-black text-red-500">16.9%</span>
+                    <span class="text-xs text-slate-400 font-bold uppercase">Desempleo mujeres jóvenes 14-29</span>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-xl border border-slate-200 text-center stat-card animate-on-scroll delay-2">
+                    <span class="block text-3xl font-black text-amber-500">37%</span>
+                    <span class="text-xs text-slate-400 font-bold uppercase">Jóvenes en cuentapropismo</span>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-xl border border-slate-200 text-center stat-card animate-on-scroll delay-3">
+                    <span class="block text-3xl font-black text-slate-800">53%</span>
+                    <span class="text-xs text-slate-400 font-bold uppercase">Recurren a plataformas digitales</span>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 info-card animate-on-scroll">
+                    <h3 class="font-bold text-slate-800 mb-3">🎓 Desencanto Educativo</h3>
+                    <p class="text-sm text-slate-500">El <strong>50%</strong> de los jóvenes en búsqueda activa percibe
+                        que su formación es inadecuada frente al mercado alterado por la tecnología. Las competencias
+                        técnicas que adquirieron son ahora ejecutables por software.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 info-card animate-on-scroll delay-1">
+                    <h3 class="font-bold text-slate-800 mb-3">⚡ Precarización Extrema</h3>
+                    <p class="text-sm text-slate-500">El <strong>70%</strong> de jóvenes con bajo nivel educativo
+                        trabaja en condiciones precarias. Las vacantes junior cayeron hasta un <strong>25%</strong> a
+                        nivel global entre 2023-2024.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 8: Rankings Internacionales -->
+        <section id="rankings"
+            class="bg-white p-10 rounded-3xl shadow-lg border border-slate-100 scroll-mt-20 animate-on-scroll">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-3xl font-bold mb-4">Posición de Argentina en el Mundo</h2>
+                <p class="text-slate-500 text-lg">El ILIA 2024-2025 revela un retroceso preocupante: Argentina cayó al
+                    <strong>6° lugar</strong> en América Latina, con <strong>52.98/100</strong> puntos.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h4 class="font-bold text-slate-400 text-xs uppercase mb-4 tracking-wider">Ranking ILIA — América
+                        Latina</h4>
+                    <div class="chart-container" style="max-height:350px; min-height:280px;">
+                        <canvas id="iliaChart"></canvas>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-red-50 p-5 rounded-xl border border-red-100">
+                        <span class="text-sm font-bold text-red-600">⬇ Talento Humano</span>
+                        <p class="text-sm text-slate-500 mt-1">De <strong>43.21</strong> a <strong>40.59</strong> pts.
+                            Fuga masiva de perfiles STEM hacia freelance o emigración.</p>
+                    </div>
+                    <div class="bg-red-50 p-5 rounded-xl border border-red-100">
+                        <span class="text-sm font-bold text-red-600">⬇ I+D+A (-10 pts)</span>
+                        <p class="text-sm text-slate-500 mt-1">De <strong>56.04</strong> a <strong>46.20</strong>.
+                            Desfinanciamiento de la producción científica y patentes tecnológicas.</p>
+                    </div>
+                    <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+                        <span class="text-sm font-bold text-blue-600">76% de CEOs</span>
+                        <p class="text-sm text-slate-500 mt-1">Implementa o planea usar IA en sus operaciones. La
+                            adopción privada avanza sin gobernanza estatal.</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <span class="text-sm font-bold text-slate-600">🌐 Oxford AI Readiness</span>
+                        <p class="text-sm text-slate-500 mt-1">EE.UU. lidera con 87.20/100. Latam carece de soberanía
+                            tecnológica: rol de "adoptantes" pasivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 9: Políticas Públicas -->
+        <section id="politicas" class="space-y-10 scroll-mt-20">
+            <div class="animate-on-scroll">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4 border-l-8 border-arg-sky pl-4">Políticas de
+                    Reconversión Laboral</h2>
+                <p class="text-slate-600 text-lg max-w-3xl">El Estado y el sector privado han desplegado programas de
+                    capacitación. Pero existe un desfase crítico: muchos enseñan habilidades que la IA ya está
+                    automatizando.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 info-card animate-on-scroll">
+                    <span class="text-arg-sky text-2xl mb-2 block">🏛️</span>
+                    <h4 class="font-bold text-sm mb-1">Argentina Programa 4.0</h4>
+                    <p class="text-xs text-slate-400">Programación, testing, análisis de datos. Articulación con UTN y
+                        universidades públicas.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 info-card animate-on-scroll delay-1">
+                    <span class="text-arg-sky text-2xl mb-2 block">🎯</span>
+                    <h4 class="font-bold text-sm mb-1">Talento Tech (CABA)</h4>
+                    <p class="text-xs text-slate-400">UX/UI, Marketing Digital e IA aplicada. Formato intensivo con
+                        Coderhouse y UTN.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 info-card animate-on-scroll delay-2">
+                    <span class="text-arg-sky text-2xl mb-2 block">🌾</span>
+                    <h4 class="font-bold text-sm mb-1">Santa Fe 4.0</h4>
+                    <p class="text-xs text-slate-400">IA, Ciberseguridad e IoT. Decreto 1487/25 para modernización
+                        industrial.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 info-card animate-on-scroll delay-3">
+                    <span class="text-arg-sky text-2xl mb-2 block">🍇</span>
+                    <h4 class="font-bold text-sm mb-1">Mendoza Forma Tec</h4>
+                    <p class="text-xs text-slate-400">Miles de becas para especialización técnica avanzada.</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 text-center stat-card animate-on-scroll">
+                    <span class="block text-3xl font-black text-red-500">80%</span>
+                    <span class="text-xs text-slate-400 font-bold uppercase">Empresarios detectan brecha de
+                        habilidades</span>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-xl border border-slate-200 text-center stat-card animate-on-scroll delay-1">
+                    <span class="block text-3xl font-black text-amber-500">48%</span>
+                    <span class="text-xs text-slate-400 font-bold uppercase">Trabajadores sin formación en IA</span>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-xl border border-slate-200 text-center stat-card animate-on-scroll delay-2">
+                    <span class="block text-3xl font-black text-arg-sky">70%</span>
+                    <span class="text-xs text-slate-400 font-bold uppercase">Citan falta de pensamiento crítico</span>
+                </div>
+            </div>
+            <div class="bg-amber-50 border-2 border-amber-300 p-8 rounded-2xl animate-on-scroll">
+                <h3 class="font-bold text-amber-800 text-lg mb-3">⚠️ La Paradoja Pedagógica</h3>
+                <p class="text-sm text-slate-700">Muchos de estos programas centran su estrategia en la enseñanza de
+                    <strong>codificación rudimentaria y Full Stack básico</strong>. Precisamente, las competencias que
+                    la IA Generativa está absorbiendo con mayor eficiencia. La arquitectura educativa debe migrar hacia
+                    <strong>pensamiento algorítmico, curaduría ética, ingeniería de prompts avanzada y liderazgo
+                        estratégico</strong>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección 10: Conclusiones Estratégicas -->
+        <section id="conclusiones"
+            class="bg-white border-2 border-arg-sky p-10 rounded-3xl scroll-mt-20 animate-on-scroll">
+            <h2 class="text-3xl font-black text-slate-900 mb-8 text-center">Síntesis Evaluativa</h2>
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-red-400">
+                    <h3 class="font-bold text-sm mb-2">1. Inversión del Paradigma</h3>
+                    <p class="text-sm text-slate-500">El riesgo ya no está en el trabajo físico sino en la cúspide
+                        cognitiva. ~700K empleos de oficina bajo amenaza directa. La afectación prioriza mujeres y
+                        profesionales de edad madura.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-amber-400">
+                    <h3 class="font-bold text-sm mb-2">2. Informalidad como Acelerador</h3>
+                    <p class="text-sm text-slate-500">42% del tejido laboral está desprotegido. La IA digital penetra la
+                        economía informal sin barreras de entrada, empujando honorarios freelance hacia la subsistencia.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-blue-400">
+                    <h3 class="font-bold text-sm mb-2">3. Estallido de Movilidad Juvenil</h3>
+                    <p class="text-sm text-slate-500">Colapso del "primer escalón": -14% a -25% de vacantes junior.
+                        16.9% desempleo en mujeres jóvenes. Generación excluida de aprendizaje corporativo.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-emerald-400">
+                    <h3 class="font-bold text-sm mb-2">4. Respuesta Necesaria</h3>
+                    <p class="text-sm text-slate-500">Soberanía tecnológica (I+D), matriz pedagógica post-IA
+                        (pensamiento crítico sobre codificación básica), y redes de "flexiguridad" para sostener la
+                        transición.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Download CTA Section -->
         <section
             class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-12 rounded-3xl text-center relative overflow-hidden animate-on-scroll">
@@ -613,9 +887,12 @@
             <div class="flex flex-col items-start gap-3">
                 <span class="text-white font-semibold text-sm uppercase tracking-wider">Navegación</span>
                 <a href="#concepto" class="text-sm hover:text-white transition-colors">Concepto</a>
-                <a href="#demografia" class="text-sm hover:text-white transition-colors">Demografía</a>
                 <a href="#sectores" class="text-sm hover:text-white transition-colors">Sectores</a>
-                <a href="#juventud" class="text-sm hover:text-white transition-colors">Juventud</a>
+                <a href="#sustitucion" class="text-sm hover:text-white transition-colors">Sustitución</a>
+                <a href="#informalidad" class="text-sm hover:text-white transition-colors">Informalidad</a>
+                <a href="#rankings" class="text-sm hover:text-white transition-colors">Rankings</a>
+                <a href="#politicas" class="text-sm hover:text-white transition-colors">Políticas</a>
+                <a href="#conclusiones" class="text-sm hover:text-white transition-colors">Conclusiones</a>
             </div>
             <div class="md:text-right">
                 <div class="flex md:justify-end gap-2 mb-4">
@@ -796,6 +1073,77 @@
             sectorChart.data.datasets[0].backgroundColor = mode === 'risk' ? '#F6B40E' : '#74ACDF';
             sectorChart.update('active');
         }
+
+        // 4. Sustitución vs Complementariedad Doughnut
+        const sustCtx = document.getElementById('sustitucionChart').getContext('2d');
+        new Chart(sustCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Complementariedad (71%)', 'Sustitución Directa (22%)', 'Sustitución Parcial (4%)', 'Baja Exposición (38%)'],
+                datasets: [{
+                    data: [2100, 676, 129, 2100],
+                    backgroundColor: ['#10b981', '#ef4444', '#f59e0b', '#e2e8f0'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { font: { size: 11 }, padding: 15 } }
+                }
+            }
+        });
+
+        // 5. Informalidad Donut
+        const infCtx = document.getElementById('informalidadChart').getContext('2d');
+        new Chart(infCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Formales (58%)', 'Informales (42%)'],
+                datasets: [{
+                    data: [58, 42],
+                    backgroundColor: ['#74ACDF', '#ef4444'],
+                    borderWidth: 3,
+                    borderColor: '#1e293b'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: '#cbd5e1', font: { size: 12 }, padding: 15 } }
+                },
+                cutout: '65%'
+            }
+        });
+
+        // 6. ILIA Ranking
+        const iliaCtx = document.getElementById('iliaChart').getContext('2d');
+        new Chart(iliaCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Chile', 'Brasil', 'Uruguay', 'Colombia', 'México', 'Argentina'],
+                datasets: [{
+                    label: 'Puntaje ILIA',
+                    data: [70.5, 63.8, 60.2, 57.1, 55.4, 52.98],
+                    backgroundColor: ['#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#74ACDF'],
+                    borderRadius: 6,
+                    barThickness: 28
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { beginAtZero: true, max: 80, ticks: { callback: v => v + ' pts' } },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
     </script>
 </body>
 
