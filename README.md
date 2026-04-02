@@ -4,6 +4,13 @@
 
 ---
 
+## 🏢 Acerca de la Herramienta y Repositorio
+
+Este repositorio contiene el código fuente del **Dashboard Interactivo "Estado de Situación: IA y Trabajo en Argentina"**, diseñado y desarrollado por el **Laboratorio Colossus**.
+La herramienta es una aplicación web *single-page* interactiva creada priorizando la accesibilidad y velocidad. Su objetivo principal es procesar, visualizar y democratizar los hallazgos de nuestra "Investigación de Impacto Laboral 2026", sirviendo como recurso de consulta rápida para hacedores de políticas públicas, sindicatos, académicos y empresarios que enfrentan la transición tecnológica.
+
+---
+
 ## 📖 ¿Qué es este proyecto?
 
 Este sitio web interactivo presenta un cruce analítico entre dos fuentes:
@@ -110,10 +117,9 @@ No requiere instalación, servidor ni dependencias. Es un archivo HTML autoconte
 
 ```
 futuro-y-trabajo-ia/
-├── index.html                                    # Aplicación web completa
+├── index.html                                          # Aplicación web completa
 ├── Argentina_ IA, Empleo y Transición Tecnológica.pdf  # Informe descargable
-├── informe_escenarios_y_medidas.md               # Documento fuente: escenarios y medidas
-├── web.txt                                       # Versión draft inicial del sitio
+├── LICENSE                                             # Licencia MIT
 ├── .gitignore
 └── README.md
 ```
@@ -142,4 +148,5 @@ Documento técnico de **circulación libre**.
 
 ## 📝 Licencia
 
-Este proyecto es de circulación libre con fines educativos e informativos. Se permite su distribución citando las fuentes originales.
+Este proyecto está licenciado bajo la **Licencia MIT**. Puedes consultar el archivo [LICENSE](LICENSE) para más detalles sobre sus términos y condiciones de uso y distribución.
+El contenido (informes y visualizaciones) es de circulación libre con fines educativos e informativos, debiendo siempre citar a **Laboratorio Colossus** como fuente original.
